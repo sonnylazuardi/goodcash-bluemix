@@ -1,0 +1,23 @@
+<md-content>
+<div layout="vertical" layout-padding>
+    <h2 style="margin:0px">Create Expense</h2>
+    <p style="margin:0px; magin-bottom:7px"> Please inform us about your expense</p>
+</div>
+<md-card layout="vertical">
+    <h2 flex class="card-title">Expense</h2>
+    		Expense Amount : 
+            <input type="text" ng-model="textExpense" ng-click="textClick($event)">
+            Category : 
+            <select style="border-width:0px; width:300px;" ng-model="category" ng-options="cat.id as cat.name for cat in categories"></select>
+            Description : 
+            <input type="text" ng-model="textDetail">
+    	</select>
+    <br>
+</md-card>
+
+<section layout="vertical" layout-sm="horizotal" layout-align="center center">
+    <md-button class="md-button-raised button-white" ng-click="back()">Back</md-button>
+    <md-button class="md-button-raised button-main" ng-click="save()">Save</md-button>
+</section>
+
+</md-content>

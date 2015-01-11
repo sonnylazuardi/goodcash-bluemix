@@ -1,0 +1,584 @@
+/***************
+      FONT
+****************/
+@font-face {
+	font-family: 'Blanch';
+    src: url(../font/blanch-condensed.ttf);
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(../font/Lato-Light.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(../font/Lato-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(../font/Lato-Bold.woff2) format('woff2');
+}
+
+/***************
+  RESET LAYOUT
+****************/
+@-ms-viewport, @-viewport {
+	width: device-width;
+}
+
+*:hover, *:active, *:focus {
+    outline: none;
+    border: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, small {
+	font-family: 'Lato';
+}
+h1, h2, h3 {
+	font-size: 1.2em;
+}
+
+md-card {
+	background-color: #fff;
+}
+
+md-card .card-title {
+	margin-left : -8px;
+	margin-top : -8px;
+	background-color: #0ab396;
+	color : #fff;
+	padding: 3px;
+	padding-left: 10px;
+	width : 50%;
+	display : block;
+	font-weight: lighter;
+}
+
+md-button.normal-button {
+	height: 50px;
+	padding : 3px 30px;
+}
+
+md-button.full-width {
+	width: 100%;
+}
+
+md-button.success-button {
+	background-color: #5cb85c;
+	color : #fff;
+}
+
+md-button.success-button:hover {
+	background-color: #449d44;
+}
+
+md-button.info-button {
+	background-color: #5bc0de;
+	color : #fff;
+}
+
+md-button.danger-button {
+	background-color: #c0392b;
+	color : #fff;
+}
+
+md-button.info-button:hover {
+	background-color: #31b0d5;
+}
+
+
+/***************
+    MAIN TAB
+****************/
+.main-tab {
+	zoom: .65;
+	position: fixed;
+	bottom : 0;
+	z-index: 100;
+	border-top: 1px solid #ddd;
+}
+
+.main-tab * {
+	color: #0ab396!important;
+}
+
+.main-tab > .tabs-header{
+	height : 60px;
+	background-color: white;
+}
+
+.tab-label {
+	padding :0;
+	margin: 0;
+}
+
+.tab-label img {
+	height: 35px;
+	opacity: 0.5;
+}
+
+.tab-label small {
+	font-size: 0.6em;
+	font-weight: normal;
+	color: #0ab396;
+}
+
+.tab {
+	width: 100%;
+	height: 100%;
+	max-height: 100%;
+}
+
+.tab-paginator {
+	background-color: #ddd;
+}
+
+md-slider .slider-track {
+	background-color:#ddd;
+}
+
+md-slider .slider-thumb:after {
+	background-color:#0ab396;
+	border-color:#0ab396;
+}
+
+md-slider .slider-track-fill {
+	background-color:#0ab396;
+}
+
+md-button.button-main {
+	width: 100px;
+	height: 30px;
+	background-color:#0ab396;
+	color:#fff;
+	margin: 3px;
+}
+
+md-button.button-white {
+	width: 100px;
+	height: 30px;
+	background-color:#fff;
+	color:#000;
+	margin: 3px;
+}
+
+md-button.button-danger {
+	width: 100px;
+	height: 30px;
+	background-color:#D35400;
+	color:#fff;
+	margin: 3px;
+}
+
+body {
+
+	background-image: url(../img/background.jpg);
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	width: 100%;
+	overflow: hidden;
+}
+
+
+.main-content {
+	position: relative;
+	border: 0px solid black;
+	height: 100%;
+	opacity: 1;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	padding-top : 50px;
+	padding-bottom: 75px;
+}
+
+.animate-switch-container {
+    position:relative;
+    height:100%;
+    opacity: 1.0;
+}
+
+.animate-switch {
+	-webkit-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+	transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+	position: absolute;
+}
+
+.animate-switch.ng-leave {
+	left: 0%;
+}
+
+.animate-switch.ng-leave.ng-leave-active {
+	left : -110%;
+}
+
+.animate-switch.ng-enter {
+	left: 110%;
+}
+
+.animate-switch.ng-enter.ng-enter-active {
+	left : 0%;
+}
+
+.animate-switch.ng-enter.ng-enter-active {
+	z-index: 0;
+}
+
+
+md-tabs-ink-bar {
+	background: #0ab396;
+	top : 0;
+	height: 6px;
+}
+
+md-content {
+	overflow: hidden;
+}
+
+.tab-icon {
+	height: 40px;
+	width: 40px;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: 40px 40px;
+	background-position: center center;
+	display: inline-block;
+	text-align: center;
+	opacity: 0.6;
+}
+
+.active .tab-icon {
+	opacity: 1;
+}
+
+#tab-wallet .tab-icon {
+	background-image: url(../img/icon_wallet_dark.png);
+}
+
+#tab-wallet.active .tab-icon {
+	background-image: url(../img/icon_wallet_light.png);
+}
+
+#tab-bank .tab-icon {
+	background-image: url(../img/icon_bank_dark.png);
+}
+
+#tab-bank.active .tab-icon {
+	background-image: url(../img/icon_bank_light.png);
+}
+
+#tab-history .tab-icon {
+	background-image: url(../img/icon_history_dark.png);
+}
+
+#tab-history.active .tab-icon {
+	background-image: url(../img/icon_history_light.png);
+}
+
+#tab-saving .tab-icon {
+	background-image: url(../img/icon_saving_dark.png);
+}
+
+#tab-saving.active .tab-icon {
+	background-image: url(../img/icon_saving_light.png);
+}
+
+#tab-settings .tab-icon {
+	background-image: url(../img/icon_settings_dark.png);
+}
+
+#tab-settings.active .tab-icon {
+	background-image: url(../img/icon_settings_light.png);
+}
+
+/***************
+  MAIN TOOLBAR
+****************/
+.main-toolbar {
+	zoom: .65;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+}
+
+.main-toolbar, .main-toolbar {
+	background-color: #0ab396;
+	color: #fff;
+}
+
+.main-toolbar img {
+	height: 40px;
+	display: inline-block;
+	padding-top: 5px;
+}
+
+.main-toolbar .left-title {
+	display: inline-block;
+}
+
+.main-toolbar .title {
+	margin-left: 10px;
+}
+
+.main-toolbar h2 {
+	font-family: Blanch;
+	font-size: 2.2em;
+	margin: 0;
+	display: inline-block;
+}
+
+.main-toolbar .icon-toolbar md-button{
+	background: #1ac3a6;
+	box-shadow: none;
+	width: 50px;
+	height: 50px;
+	margin-left: 10px;
+}
+
+.main-toolbar .icon-toolbar md-button:hover {
+	box-shadow: none;
+	background-color: #2ad3b6;
+}
+
+.main-toolbar .icon-toolbar *{
+	color :#000;
+}
+
+.main-toolbar .icon-toolbar md-button i{
+	font-size: 20px;
+	color: #8affe6;
+}
+
+/***************
+  PUBLIC CLASS
+****************/
+
+.category-icon {
+	width: 70px;
+	height: 70px;
+	margin : 12px;
+	border-radius: 35px;
+	background-color: #000;
+	display: block;	
+}
+
+.category-icon .fa {
+	font-size: 40px;
+	line-height: 70px;
+	color : #fff;
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+.category-icon-small {
+	width: 50px;
+	height: 50px;
+	margin : 12px;
+}
+
+.category-icon-small .fa {
+	font-size: 30px;
+	line-height: 50px;
+}
+
+md-input-group.long > input {
+	width: 100%;
+}
+
+md-input-group {
+	font-size: 1.6em;
+	width: 100%;
+}
+
+md-input-group label {
+	margin-bottom: 10px;
+	margin-top: 0px;
+	color: #999;
+}
+
+md-input-group input {
+	border : none;
+	border-bottom: 2px #999 solid;
+}
+
+md-input-group.md-input-focused input {
+	border-bottom: 2px #0ab396 solid;
+}
+
+md-input-group.md-input-focused label {
+	color: #0ab396;
+}
+
+md-input-group.md-input-has-value label, md-input-group.md-input-focused label {
+	margin-bottom: 0px;
+	margin-top: 10px;
+}
+
+/***************
+ WALLET & BANK
+****************/
+
+#wallet h5, #bank h5 {
+	color : #888;
+}
+
+#wallet h1, #bank h1 {
+	color : #444;
+}
+
+#wallet h5, #wallet h1, #bank h5, #bank h1 {
+	margin: 0;
+	text-align: right;
+}
+
+#wallet .balance *, #bank .balance *  {
+	text-align: center;
+}
+
+#wallet .balance, #bank .balance {
+	background-color: white;
+	font-size: 1.5em;
+}
+
+#wallet #category-list .icon, #bank #category-list .icon {
+	width: 70px;
+	height: 70px;
+	margin : 12px;
+	border-radius: 35px;
+	background-color: #000;
+	display: block;	
+}
+
+#wallet #category-list .icon .fa, #bank #category-list .icon .fa{
+	font-size: 40px;
+	line-height: 70px;
+}
+
+#wallet #category-list h5, #bank #category-list h5 {
+	font-size: 1.2em;
+	font-weight: lighter;
+}
+
+#wallet #wallet-today-record .md-tile-content, #history #history-record .md-tile-content, #bank #bank-today-record .md-tile-content{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#wallet #wallet-today-record h1, #wallet #wallet-today-record h5, #history #history-record h1, #history #history-record h5, #bank #bank-today-record h1, #bank #bank-today-record h5 {
+	width: 49%;
+	margin : 0;
+}
+
+#wallet #wallet-today-record h1, #history #history-record h1, #bank #bank-today-record h1 {
+	font-size: 1.2em;
+	text-align: right;
+}
+
+#wallet #wallet-today-record h5, #history #history-record h5, #bank #bank-today-record h5 {
+	text-align: left;
+	font-size: 1em;
+}
+
+#wallet #wallet-today-record .clock, #history #history-record .clock, #bank #bank-today-record .clock{
+	color: #0ab396;
+	font-size: 0.8em;
+}
+
+#wallet #wallet-today-record .detail, #history #history-record .detail , #bank #bank-today-record .detail{
+	color: #444;
+	/*margin-left : 10px;*/
+}
+
+#wallet #wallet-today-record h5, #history #history-record h5, #bank #bank-today-record h5{
+	padding-left: 10px;
+}
+
+#settings h2 {
+	margin: 0;
+}
+
+/***************
+    SPLASH
+****************/
+
+#splash {
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgb(112, 92, 68);
+}
+
+#splash .logo {
+	background: url('../img/logo.png');
+	width: 140px;
+	height: 140px;
+	position: absolute; 
+	margin: auto; 
+	top: 0; left: 0; right: 0; bottom: 0;
+}
+
+.fadein,
+.fadeout {
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+}
+
+.fadein.ng-hide-remove,
+.fadeout.ng-hide-add.ng-hide-add-active {
+  opacity: 0;
+  display: block !important;
+}
+
+.fadeout.ng-hide-add,
+.fadein.ng-hide-remove.ng-hide-remove-active {
+  opacity: 1;
+  display: block !important;
+}
+
+
+
+
+.category-percent {
+	font-weight: bold;
+	color: #0ab396;
+}
+
+.category-name {
+	font-weight: normal;
+	color: #000;
+	float: right;
+}
+
+md-dialog .dialog-content.calc {
+	overflow: hidden;
+	padding: 0;
+}
+
+#chart {
+	height: 250px;
+	width: 100%;
+	margin-bottom: 80px;
+}
+
+#calculator {
+	zoom: .8;
+}

@@ -1,0 +1,12 @@
+applications:
+- services:
+  - goodcash-DataCache
+  - goodcash-MonitoringAndAnalytics
+  disk_quota: 1024M
+  host: goodcash
+  name: goodcash
+  command: node app.js
+  path: .
+  domain: eu-gb.mybluemix.net
+  instances: 1
+  memory: 512M

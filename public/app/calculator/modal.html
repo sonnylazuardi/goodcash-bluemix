@@ -1,0 +1,86 @@
+<md-dialog aria-label="Calculator" id="calculator">
+<div style="background-color:#0ab396;" class="dialog-title" layout layout-align="center center">
+    <h3 style="color:#fff;" layout-padding>INPUT {{source.toUpperCase()}}</h3>
+</div>
+<div class="dialog-content calc">
+    <div layout layout-padding>
+        <div flex="75">
+            <div style="font-size:30px;" accounting number="textCalc"></div>
+        </div>
+        <div flex="25" style="text-align:center;">
+            <md-button class="md-button-fab" ng-click="del()">
+                Del
+            </md-button>
+        </div>
+    </div>
+    <div layout layout-padding>
+        <div flex="25" style="text-align:center;">
+             <md-button class="md-button-fab md-button" ng-click="click(1)">1</md-button>
+        </div>
+        <div flex="25" style="text-align:center;">
+            <md-button class="md-button-fab md-button" ng-click="click(2)">2</md-button>
+        </div>
+        <div flex="25" style="text-align:center;">
+            <md-button class="md-button-fab md-button" ng-click="click(3)">3</md-button>
+        </div>
+        <div flex="25" style="text-align:center;">
+            <md-button style="background-color:#F89406; color:#fff" class="md-button-fab md-button" ng-click="operator(0)">+</md-button>
+        </div>
+    </div>
+    <div layout layout-padding>
+        <div flex="25" style="text-align:center;">
+             <md-button class="md-button-fab md-button" ng-click="click(4)">4</md-button>
+        </div>
+        <div flex="25" style="text-align:center;">
+            <md-button class="md-button-fab md-button" ng-click="click(5)">5</md-button>
+        </div>
+        <div flex="25" style="text-align:center;">
+            <md-button class="md-button-fab md-button" ng-click="click(6)">6</md-button>
+        </div>
+        <div flex="25" style="text-align:center;">
+            <md-button style="background-color:#F89406; color:#fff" class="md-button-fab md-button" ng-click="operator(1)">-</md-button>
+        </div>
+    </div>
+    <div layout layout-padding>
+        <div flex="25" style="text-align:center;">
+             <md-button class="md-button-fab md-button" ng-click="click(7)">7</md-button>
+        </div>
+        <div flex="25" style="text-align:center;">
+            <md-button class="md-button-fab md-button" ng-click="click(8)">8</md-button>
+        </div>
+        <div flex="25" style="text-align:center;">
+            <md-button class="md-button-fab md-button" ng-click="click(9)">9</md-button>
+        </div>
+        <div flex="25" style="text-align:center;">
+            <md-button style="background-color:#F89406; color:#fff" class="md-button-fab md-button" ng-click="operator(2)">*</md-button>
+        </div>
+    </div>
+    <div layout layout-padding>
+        <div flex="25" style="text-align:center;">
+             <md-button class="md-button-fab md-button" ng-click="clicko(2)">00</md-button>
+        </div>
+        <div flex="25" style="text-align:center;">
+            <md-button class="md-button-fab md-button" ng-click="clicko(1)">0</md-button>
+        </div>
+        <div flex="25" style="text-align:center;">
+            <md-button class="md-button-fab md-button" ng-click="clicko(3)">000</md-button>
+        </div>
+        <div flex="25" style="text-align:center;">
+            <md-button style="background-color:#F89406; color:#fff" class="md-button-fab md-button" ng-click="operator(3)">/</md-button>
+        </div>
+    </div>
+
+    
+</div>
+<div class="dialog-actions">
+
+    <section layout="vertical" layout-sm="horizotal" layout-align="center center">
+        <md-button class="button-danger" ng-click="equals()">
+        =
+        </md-button>
+        <md-button class="button-main dialog-close" ng-click="close()">
+        OK
+        </md-button>
+    </section>
+</div>
+</md-dialog>

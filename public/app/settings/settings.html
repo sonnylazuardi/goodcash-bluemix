@@ -1,0 +1,50 @@
+<md-content id="settings">
+    <md-card>
+        <h2 class='card-title'>Category</h2>
+        <md-list id='category-list'>
+            <md-item ng-repeat="cat in categories">
+                <md-divider inset></md-divider>
+                <md-item-content>
+                    <div class='md-tile-left'>
+                        <span class='category-icon' style='background : {{cat.color}}' ng-click="go('/category/edit/'+cat.id)">
+                            <i class="fa {{cat.icon}}"></i>
+                        </span>
+                    </div>
+                    <div class='md-tile-content'>
+                        <h2><span class='category-percent'>{{cat.percent}} %</span> <span class='category-name'>{{cat.name}}</bold></h2>
+                        <md-slider ng-model="cat.percent" min="0" max="100" aria-labels="cat.name" id="{{cat.name}}-slider" ng-change="change(cat.id, cat.percent)"></md-slider>
+                    </div>
+                </md-item-content>
+            </md-item>
+        </md-list>
+        <md-button ng-click="save()" class="normal-button success-button">
+            <i class='fa fa-check'></i> Save
+        </md-button>
+        <md-button ng-click="create()" class="normal-button info-button">
+            <i class='fa fa-plus'></i> Create
+        </md-button>
+        <md-button ng-click="reset()" class="normal-button danger-button">
+            <i class='fa fa-close'></i> Reset
+        </md-button>
+    </md-card>
+
+    <md-card>
+        <h2 class='card-title'>Currency</h2>
+            <md-input-group >
+                <label for="decimal">Currency Symbol</label>
+                <md-input id="decimal" ng-model="$root.symbol">
+            </md-input-group>
+            <md-input-group >
+                <label for="decimal">Decimal</label>
+                <md-input id="decimal" ng-model="$root.decimal">
+            </md-input-group>
+            <md-input-group >
+                <label for="decimal">Thousand</label>
+                <md-input id="decimal" ng-model="$root.thousand">
+            </md-input-group>
+            <md-input-group >
+                <label for="decimal">Precision</label>
+                <md-input id="decimal" ng-model="$root.precision">
+            </md-input-group>
+    </md-card>
+</md-content>

@@ -1,0 +1,27 @@
+<md-content id='history'>
+    <div ac-chart="'pie'" ac-data="data" ac-config="config" id='chart' class='chart'></div>
+    <md-card id='history-record' ng-repeat="date in dates">
+        <h2 class='card-title'>{{date.tanggal}}</h2>
+        <md-list>
+            <md-item ng-repeat="item in date.items">
+                <md-item-content>
+                    <div class='md-tile-left'>
+                        <span class='category-icon category-icon-small' style='background : {{getCat(item.category_id).color}}'>
+                            <i class="fa {{getCat(item.category_id).icon}}"></i>
+                        </span>
+                    </div>
+                    <div class='md-tile-content' layout='horizontal'>
+                        <h5>
+                            <span class='clock' time number="item.timestamp" format="'HH:mm'"></span><br/>
+                            <span class='detail'>{{item.detail}}</span>
+                        </h5>
+                        <h1 accounting number="item.value" negative="(item.type == 'expense')"></h1>
+                    </div>
+                </md-item-content>
+                <md-divider></md-divider>
+            </md-item>
+        </md-list>
+    </md-card>
+</md-content>
+
+<p ng-show='dates.length==0'>History data not available</p>

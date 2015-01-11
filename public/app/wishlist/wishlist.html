@@ -1,0 +1,51 @@
+<md-content id='wallet'>
+    <md-card class='balance'>
+        <h5>Saving Balance</h5>
+        <h1 accounting number="savings">
+        </h1>
+    </md-card>
+
+    <md-card id='wallet-today-record'>
+        <h2 class='card-title'>Wishlist</h2>
+        <md-list>
+
+            <md-item ng-repeat="wishlist in wishlists">
+                <md-item-content>
+                    <div class='md-tile-left'>
+                        <span class='category-icon category-icon-small' style='background : #EB9532'>
+                            <i style="font-size:20px" class="fa"> {{wishlist.collect / wishlist.price * 100}} %</i>
+                        </span>
+                    </div>
+                    <div class='md-tile-content' layout='horizontal'>
+                        <h5>
+                            {{wishlist.title}}<br/>
+                            <span class='detail'>{{wishlist.description}}</span>
+                        </h5>
+                        <h1 accounting number="wishlist.price" negative="(item.type == 'expense')"></h1>
+                    </div>
+                    <br>
+                </md-item-content>
+                <br>
+                <md-item-content style="margin-top:-30px" layout layout-align="center right">
+                    <md-button style="margin:3px; width:25px; height:25px; background:#26C281;" ng-click="delete(wishlist.id)" class="md-button-fab">
+                        <i style="color:#fff;" class="fa fa-trash"></i>
+                    </md-button>
+                    <md-button style="margin:3px; width:25px; height:25px; background:#26C281;" ng-click="edit(wishlist.id)" class="md-button-fab">
+                        <i style="color:#fff;" class="fa fa-edit"></i>
+                    </md-button>
+
+                    <span ng-show="wishlist.star">
+                        Star
+                    </span>
+                    <span ng-show="wishlist.bought">
+                        Bought
+                    </span>
+                </md-item-content>
+                <md-divider></md-divider>
+
+            </md-item>
+        </md-list>
+        <br>
+    </md-card>
+
+</md-content>

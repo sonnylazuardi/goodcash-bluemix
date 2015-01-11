@@ -1,0 +1,46 @@
+<md-content class="main-content">
+    <div layout="vertical" layout-padding>
+        <h2 style="margin:0px">Create Income {{source.toUpperCase()}}</h2>
+        <p style="margin:0px; magin-bottom:7px"> Please set your default share when you add your income </p>
+    </div>
+<md-card layout="vertical">
+    <h2 flex class="card-title">Income</h2>
+        Income Amount : 
+        <div style="font-size:30px;" accounting number="textIncome" ng-click="textClick($event)"></div>
+        Description : 
+        <input type="text" ng-model="textDetail">
+</md-card>
+
+<md-card>
+    <h2 class="card-title">Portion</h2>
+    <div ng-repeat="cat in categories" layout="vertical" layout-align="left center">
+        <div flex layout layout-padding layout-align="center center">
+            <div>
+                <span href="#/category/edit/{{cat.id}}" class='category-icon' style='background : {{cat.color}}'>
+                    <i class="fa {{cat.icon}}"></i>
+                </span>
+            </div>
+            <div flex>
+                <div layout="vertical" >
+                    <h2 style="margin:0px;font-weight:lighter;" flex>{{cat.name}}</h2>
+                    <div style="color:#0ab396" flex>{{cat.percent}} %</div>
+                </div>
+            </div>
+            <h3 flex style="text-align:right"><span accounting number="cat.percent / 100 * textIncome"></span>
+            </h3>
+        </div>
+        <div flex layout-padding>
+            <md-slider style="color:#fff" ng-model="cat.percent" min="0" max="100" aria-labels="cat.name" ng-change="change(cat.id, cat.percent)">
+            </md-slider>
+        </div>
+    </div>
+</md-card>
+
+
+<section layout="vertical" layout-sm="horizotal" layout-align="center center">
+    <md-button class="md-button-raised button-white" ng-click="back()">Back</md-button>
+    <md-button class="md-button-raised button-main" ng-click="save()">Save</md-button>
+</section>
+<br>
+
+</md-content>

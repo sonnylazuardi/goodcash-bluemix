@@ -1,0 +1,55 @@
+<div class="animate-switch-container" ng-switch on="data.selectedIndex">
+    <div class='animate-switch tab main-content' ng-switch-when="0" md-swipe-left="next()" md-swipe-right="previous()" >
+        <div ng-controller="WalletCtrl">
+            <ng-include src="'app/wallet/wallet.html'"></ng-include>
+        </div>
+    </div>
+    <div class='animate-switch tab main-content' ng-switch-when="1" md-swipe-left="next()" md-swipe-right="previous()" >
+        <div ng-controller="BankCtrl">
+            <ng-include src="'app/bank/bank.html'"></ng-include>
+        </div>
+    </div>
+    <div class='animate-switch tab main-content' ng-switch-when="2" md-swipe-left="next()" md-swipe-right="previous()" >
+        <div ng-controller="WishlistCtrl">
+            <ng-include src="'app/wishlist/wishlist.html'"></ng-include>
+        </div>
+    </div>
+    <div class='animate-switch tab main-content' ng-switch-when="3" md-swipe-left="next()" md-swipe-right="previous()" >
+        <div ng-controller="HistoryCtrl">
+            <ng-include src="'app/history/history.html'"></ng-include>
+        </div>
+    </div>
+    <div class='animate-switch tab main-content' ng-switch-when="4" md-swipe-left="next()" md-swipe-right="previous()" >
+        <div ng-controller="SettingsCtrl">
+            <ng-include src="'app/settings/settings.html'"></ng-include>
+        </div>
+    </div>
+</div>
+
+<md-tabs selected='data.selectedIndex' center class='main-tab' align-tabs='bottom'>
+    <md-tab class='tab-label' id='tab-wallet'>
+        <md-tab-label>
+            <div class='tab-icon'></div>
+        </md-tab-label>
+    </md-tab>
+    <md-tab class='tab-label' id='tab-bank'>
+        <md-tab-label>
+            <div class='tab-icon'></div>
+        </md-tab-label>
+    </md-tab>
+    <md-tab class='tab-label' id='tab-saving'>
+        <md-tab-label>
+            <div class='tab-icon'></div>
+        </md-tab-label>
+    </md-tab>
+    <md-tab class='tab-label' id='tab-history'>
+        <md-tab-label>
+            <div class='tab-icon'></div>
+        </md-tab-label>
+    </md-tab>
+    <md-tab class='tab-label' id='tab-settings'>
+        <md-tab-label>
+            <div class='tab-icon'></div>
+        </md-tab-label>
+    </md-tab>
+</md-tabs>

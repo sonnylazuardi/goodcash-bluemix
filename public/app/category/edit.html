@@ -1,0 +1,42 @@
+<md-content class="main-content">
+	<div layout="vertical" layout-padding>
+        <h2 style="margin:0px">Edit Category</h2>
+        <p style="margin:0px; magin-bottom:7px"> Please provide the data</p>
+    </div>
+	<md-card>
+	    <h2 class="card-title">Category Information</h2>
+	    <md-input-group layout="vertical" layout-padding>
+		  <label for="i1">Name</label>
+		  <md-input style="border-width:0 0 0px" id="i1" ng-model="category.name"></md-input>
+          <div layout>
+              <div flex>
+                    <label>Color</label>
+                   <md-radio-group ng-model="category.color">
+                    <md-radio-button ng-repeat="d in colors" ng-value="d" aria-label="{{ d }}">
+                        <div style="background: {{d}}; width: 40px; height: 30px"></div>
+                    </md-radio-button>
+
+                  </md-radio-group>
+              </div>
+              <div flex>
+                  <label>Icon</label>
+
+                   <md-radio-group ng-model="category.icon">
+                    <md-radio-button ng-repeat="d in icons" ng-value="d" aria-label="{{ d }}">
+                        <i class="fa {{d}}"></i>
+                    </md-radio-button>
+        
+              </div>
+          </div>
+		  
+
+		</md-input-group>  
+	</md-card>
+
+<section layout="vertical" layout-sm="horizotal" layout-align="center center">
+    <md-button class="md-button-raised button-main" ng-click="save()">Save</md-button>
+
+    <md-button class="md-button-raised button-danger" ng-cloak ng-if="id && !category.is_savings && !category.is_others" ng-click="delete()">Delete</md-button>
+</section>
+
+</md-content>
